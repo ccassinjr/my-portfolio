@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Carlos" />
+    <meta charset="utf-8">
+    <meta name="author" content="Carlos">
     <meta
       name="description"
-      content="This page contains all the things I am learning how to create as I learn HTML, CSS and JavaScript."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      content="This page contains all the things I am learning how to create as I learn HTML, CSS and JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos | Aspiring Frontend Developer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
-      <nav>
+      <nav aria-label="primary navigation">
         <a href="#home">Home</a>
         <a href="#about">About me</a>
         <a href="#learning">My learning journey</a>
@@ -41,13 +45,16 @@
       </section>
       <section id="about">
         <h2 class="headings">About me</h2>
+        <figure>
         <img
-          src="./images/me.jpeg"
-          alt="Carlos smiling warmly at the camera in a well-lit indoor setting with a neutral background, conveying a friendly and approachable mood"
-          width="200"
-          height="200"
-          class="profile-pic"
-        />
+          src="images/wife-and-i-matterhorn-swiss.jpg"
+          alt="Carlos and his wife in front of the Matterhorn in Switzerland"
+          title="My wife and I in front of the Matterhorn in Switzerland"
+          width="300"
+          height="300"
+          class="personal-photo">
+        <figcaption>My wife and I in front of the Matterhorn in Switzerland</figcaption>
+        </figure>
         <p>
           Hi, I'm Carlos, a London-based aspiring frontend developer. My path to
           becoming a developer has been anything but conventional. For the past
@@ -93,13 +100,14 @@
             and technologies like TypeScript and React.
           </li>
         </ul>
-        <!-- Using the obsolete HTML "border" attribute until I am able to add borders with CSS-->
+
         <table>
+          <caption>My Learning Progress</caption>
           <thead>
             <tr>
-              <th>Technology/Concept</th>
-              <th>Current Status</th>
-              <th>Project Applied in</th>
+              <th scope="col">Technology/Concept</th>
+              <th scope="col">Current Status</th>
+              <th scope="col">Project Applied in</th>
             </tr>
           </thead>
           <tbody>
@@ -114,23 +122,32 @@
               <td>In Progress</td>
               <td>-</td>
             </tr>
+   
             <tr>
               <td>JavaScript</td>
               <td>Up Next</td>
               <td>-</td>
             </tr>
-          </tbody>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">More technologies and concepts to come...</td>
+              </tr>
+          
+          </tfoot>
         </table>
-        <p><strong>Will I succeed?</strong></p>
-        <form id="question-form" action="#" method="POST">
-          <input type="radio" id="yes" name="question" value="yes" />
+       <fieldset>
+        <legend><strong>Will I succeed?</strong></legend>
+        <form id="question-form" action="https://httpbin.org/get" method="GET">
+          <input type="radio" id="yes" name="question" value="yes" required>
           <label for="yes">Yes</label>
-          <input type="radio" id="maybe" name="question" value="maybe" />
+          <input type="radio" id="maybe" name="question" value="maybe" required>
           <label for="maybe">Maybe</label>
-          <input type="radio" id="no" name="question" value="no" />
+          <input type="radio" id="no" name="question" value="no" required>
           <label for="no">No</label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit">
         </form>
+        </fieldset>
       </section>
       <section id="projects">
         <h2 class="headings">Projects</h2>
@@ -144,23 +161,64 @@
       </section>
       <section id="contact">
         <h2 class="headings">Contact</h2>
-        <!--action / method to be added-->
-        <form id="contact-form" action="-" method="-">
-          <p>Want to connect? Why not send me a message?</p>
+        <fieldset>
+          <legend><strong>Get in touch</strong></legend>
+          <p>
+            I am open to feedback, advice, and opportunities. Feel free to
+            reach out to me through the contact form below or via my social
+            media links in the footer.
+          </p>
+        <form id="contact-form" action="https://httpbin.org/post" method="POST">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" placeholder="Your name" autocomplete="on" autocapitalize="on" required>
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" placeholder="youremail@example.com" autocomplete="on" required>
 
           <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
           <label for="subscribe">
-            <input type="checkbox" id="subscribe" name="subscribe" />
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
             Subscribe to my newsletter!
           </label>
+          <button type="reset">Reset</button>
           <button type="submit">Send</button>
-        </form>
+</form>
+</fieldset>
+          <!-- Form elements - revisit later
+
+          <label for="tech-select">Select Technology:</label>
+<select id="tech-select" name="tech">
+    <optgroup label="Frontend">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+    </optgroup>
+    <optgroup label="Backend">
+        <option value="node">Node.js</option>
+    </optgroup>
+</select>
+
+<label for="tech-list">Search Technology:</label>
+<input id="tech-list" list="technologies" name="tech">
+<datalist id="technologies">
+    <option value="HTML">
+    <option value="CSS">
+    <option value="JavaScript">
+</datalist>
+
+<label for="quantity">Quantity (1-10):</label>
+<input type="number" id="quantity" name="quantity" min="1" max="10">
+
+<label for="rating">Rating (1-5):</label>
+<input type="range" id="rating" name="rating" min="1" max="5">
+
+<label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000" autocomplete="on" pattern="\+?[0-9]\d{0,15}" required/>
+
+-->
+
+        
       </section>
     </main>
     <footer>
