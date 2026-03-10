@@ -5,12 +5,12 @@
 }
 
 body {
-    margin: 0.5rem;  
+    margin: 0.5rem;
     background-color: #0d1117;
     color: #c9d1d9;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
-    font-weight: 550;
+    font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.05em;
 }
@@ -43,22 +43,25 @@ a:active {
 ul {
   list-style-type: square;
   list-style-position: inside;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 nav ul {
-  list-style: none;
-  border-bottom: 2px solid #eee;
-  padding: 0.5em;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
   gap: 30px;
+  text-align: center;
+  font-size: 1.5em;
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
+
+  /* 
 nav a {
   margin: 0 15px;
   text-decoration: none;
@@ -220,3 +223,4 @@ header {
 html {
   scroll-behavior: smooth;
 }
+ */
