@@ -1,233 +1,210 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Carlos">
-    <meta
-      name="description"
-      content="This page contains all the things I am learning how to create as I learn HTML, CSS and JavaScript.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos | Aspiring Frontend Developer</title>
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Carlos - London-based frontend developer. From law to code."/>
+    <meta title="Carlos | Aspiring Frontend Developer"/>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
+    <link rel="icon" type:="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
+    <link ref="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="favicon/site.webmanifest"/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
-    <header>
-      <nav aria-label="primary navigation">
-          <ul></ul>
-        <a href="#home">Home</a>
-        <a href="#about">About me</a>
-        <a href="#learning">My learning journey</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="nav" aria-label="main navigation">
+        <a class="nav__logo" href="ccassinjr">ccassinjr</a>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+          <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
-  <main>
-      <section id="home" class="hero">
-        <h1 class="headings">From Law to Logic</h1>
-        <p>
-          Transitioning from a career in law and welfare rights to a future in
-          tech.
-        </p>
-        <p>
-          I am leveraging my research skills, ability to interpret complex
-          information, analytical thinking, problem-solving, and communication
-          skills, to pursue a new career in tech, one line of code at a time.
-        </p>
-        <p>
-          Follow me as I document my <a href="#learning"> learning journey</a>,
-          share my experiences, and showcase my
-          <a href="#projects">projects</a>.
-        </p>
-      </section>
-      <section id="about">
-        <h2 class="headings">About me</h2>
-        <figure>
-        <img
-          src="images/wife-and-i-matterhorn-swiss.jpg"
-          alt="Carlos and his wife in front of the Matterhorn in Switzerland"
-          title="My wife and I in front of the Matterhorn in Switzerland"
-          width="300"
-          height="300"
-          class="personal-photo">
-        <figcaption>My wife and I in front of the Matterhorn in Switzerland</figcaption>
-        </figure>
-        <p>
-          Hi, I'm Carlos, a London-based aspiring frontend developer. My path to
-          becoming a developer has been anything but conventional. For the past
-          six years, I have worked as a Welfare Rights Adviser, using my law
-          degree to analyse complex situations and advocate for those in need.
-          This role has taught me the importance of meticulous problem-solving
-          and clear communication, skills that I am now channelling into the
-          world of technology.
-        </p>
-        <p>
-          My decision to transition into tech was driven by a desire for
-          continuous learning and growth, as well as a passion for creating and
-          building. I am excited to apply my existing skills in a new context
-          and am committed to developing the technical expertise required to
-          succeed in this dynamic field.
-        </p>
-      </section>
-      <section id="learning">
-        <h2 class="headings">My learning journey</h2>
-        <p>
-          Currently, I am on a structured and intensive journey to become a
-          proficient frontend developer. My learning is guided by a
-          comprehensive plan, kindly drafted by my brother-in-law, friend, and
-          mentor, where the goal is not just acquiring knowledge but practical,
-          real-world skills.
-        </p>
-        <h3 class="headings">My approach</h3>
-        <ul>
-          <li>
-            <strong>Project-Based Learning:</strong> Learning by doing. Every
-            new technology I learn is immediately applied to a project that
-            becomes part of my portfolio.
-          </li>
-          <li>
-            <strong>Focus on Professional Practices:</strong> Enhancing and
-            putting into practice the core skills of a professional developer:
-            communication, problem-solving, and collaboration.
-          </li>
-          <li>
-            <strong>Learning in the Open:</strong> My goal is to document my
-            learning journey publicly. Follow my progress as I move from the
-            fundamentals of HTML, CSS, and JavaScript into advanced frameworks
-            and technologies like TypeScript and React.
-          </li>
-        </ul>
 
-        <table>
-          <caption>My Learning Progress</caption>
-          <thead>
-            <tr>
-              <th scope="col">Technology/Concept</th>
-              <th scope="col">Current Status</th>
-              <th scope="col">Project Applied in</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>HTML</td>
-              <td>Completed</td>
-              <td><a href="index.html">This page</a></td>
-            </tr>
-
-            <tr>
-              <td>CSS</td>
-              <td>In Progress</td>
-              <td>-</td>
-            </tr>
-   
-            <tr>
-              <td>JavaScript</td>
-              <td>Up Next</td>
-              <td>-</td>
-            </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="3">More technologies and concepts to come...</td>
-              </tr>
-          
-          </tfoot>
-        </table>
-       <fieldset>
-        <legend><strong>Will I succeed?</strong></legend>
-        <form id="question-form" action="https://httpbin.org/get" method="GET">
-          <input type="radio" id="yes" name="question" value="yes" required>
-          <label for="yes">Yes</label>
-          <input type="radio" id="maybe" name="question" value="maybe" required>
-          <label for="maybe">Maybe</label>
-          <input type="radio" id="no" name="question" value="no" required>
-          <label for="no">No</label>
-          <input type="submit" value="Submit">
-        </form>
-        </fieldset>
-      </section>
-      <section id="projects">
-        <h2 class="headings">Projects</h2>
-        <p>
-          I am currently putting my newly acquired HTML and CSS knowledge and
-          skills into practice on this very page. Check back to see how it
-          develops as I advance in my learning.
-        </p>
-        <p>Once populated, this is where you will find my projects.</p>
-        <p>Coming soon...</p>
-      </section>
-      <section id="contact">
-        <h2 class="headings">Contact</h2>
-        <fieldset>
-          <legend><strong>Get in touch</strong></legend>
-          <p>
-            I am open to feedback, advice, and opportunities. Feel free to
-            reach out to me through the contact form below or via my social
-            media links in the footer.
+    <main>
+      <!-- Home - Hero -->
+      <section class="hero" id="home">
+        <div class="hero__content">
+          <h1 class="hero__heading">From Law to Logic</h1>
+          <p class="hero__subheading">
+            I spent six years as a Welfare Rights Adviser breaking down complex systems and fighting for the right outcomes. Now I build for the web. Same precision, different tools.</p>
+           <a class="hero__cta" href="projects">See my work</a>
+          </div>
+      </section> 
+      
+      <!-- About -->
+      <section class="about" id="about">
+        <div class="about__inner">
+         <div class="about__text">
+          <h2 class="about__heading">About me</h2>
+          <p class="about__body">
+            I'm Carlos, a London-based frontend developer coming from an unusual direction.
           </p>
-        <form id="contact-form" action="https://httpbin.org/post" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your name" autocomplete="on" autocapitalize="on" required>
+          <p class="about__body">
+            For six years I worked as a Welfare Rights Adviser, using my law degree to help people navigate some of the most complicated bureaucratic systems imaginable. That job taught me to read carefully, argue precisely, and never stop pushing on a problem until it's solved.
+          </p>
+          <p class="about__body">
+            Those skills transfer better than you'd think.
+          </p>
+          <p class="about__body">
+            I started coding because I wanted to build things — real things, for real people. I'm currently working through a structured mentorship programme, applying everything I learn directly to projects rather than just following tutorials. This site is one of them.
+          </p>
+          <p class="about__body">
+            I'm looking for a frontend developer role where I can bring both the technical skills I'm building and the professional habits I've spent years developing.
+          </p>
+          <p class="about__body">
+            Based in London. Open to opportunities.
+          </p>
+         </div>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="youremail@example.com" autocomplete="on" required>
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-          <label for="subscribe">
-            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-            Subscribe to my newsletter!
-          </label>
-          <button type="reset">Reset</button>
-          <button type="submit">Send</button>
-</form>
-</fieldset>
-          <!-- Form elements - revisit later
-
-          <label for="tech-select">Select Technology:</label>
-<select id="tech-select" name="tech">
-    <optgroup label="Frontend">
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="js">JavaScript</option>
-    </optgroup>
-    <optgroup label="Backend">
-        <option value="node">Node.js</option>
-    </optgroup>
-</select>
-
-<label for="tech-list">Search Technology:</label>
-<input id="tech-list" list="technologies" name="tech">
-<datalist id="technologies">
-    <option value="HTML">
-    <option value="CSS">
-    <option value="JavaScript">
-</datalist>
-
-<label for="quantity">Quantity (1-10):</label>
-<input type="number" id="quantity" name="quantity" min="1" max="10">
-
-<label for="rating">Rating (1-5):</label>
-<input type="range" id="rating" name="rating" min="1" max="5">
-
-<label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000" autocomplete="on" pattern="\+?[0-9]\d{0,15}" required/>
-
--->
-
-        
+         <!-- About - Image -->
+         <div class="about__image-wrapper">
+          <img 
+            class="about__image"
+            src="/images/carlos-profile.jpeg"
+            alt="Carlos, London-based frontend developer"
+            loading="lazy"
+            width="280"
+            height="280"
+          >
+         </div>
+        </div>
       </section>
+    
+      <!-- Projects -->
+      <section class="projects" id="projects">
+        <div class="projects__inner">
+          <h2 class="projects__heading">Projects</h2>
+          <p class="projects__body">
+            I build something with every new thing I learn. More projects are on the way — follow my progress on 
+            <a 
+              class="projects__github-link"
+              href="https://github.com/ccassinjr"
+              target="_blank"
+              rel="noopener noreferrer">GitHub</a>.
+          </p>
+
+        <!-- Project Cards -->
+        <div class="projects__grid">
+          <article class="project-card">
+            <h3 class="project-card__name">Sweet Purpose</h3>
+            <p class ="project-card__description">A website for a London-based homemade sweets business — currently in development.</p>
+            <div class="project-card__links">
+              <a 
+                class="project-card__link" 
+                href="https://sweetpurpose.co.uk"
+                target="_blank"
+                rel="noopener noreferrer">View live</a>
+              <a 
+                class="project-card__link" 
+                href="https://github.com/ccassinjr"
+                target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <div class="contact__inner">
+          <h2 class="contact__heading">Get in touch</h2>
+          <p class="contact__body">I'm open to feedback, opportunities, and conversations. If you are hiring, collaborating, or just want to talk — reach out.</p>
+
+          <form class="contact__form" action="https://formspree.io/f/xnjgboze" method="POST">
+            <div class="form__field">
+              <label class="form__label" for="name">Name</label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                autocapitalize="on"
+                placeholder="Your name"
+                required>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="email">Email</label>
+              <input
+                class="form__input"
+                type="text"
+                id="email"
+                name="email"
+                autocomplete="on"
+                placeholder="youremail@example.com"
+                required>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="message">Message</label>
+              <textarea
+                class="form__input form__input--textarea"
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Your message"
+                required></textarea>  
+            </div>
+
+            <div class="form__field form__field--checkbox">
+              <input
+                class="form__checkbox"
+                type="checkbox"
+                id="subscribe"
+                name="subscribe"
+                value="yes">
+              <label class="form__label form__label--checkbox" for="subscribe">Keep me updated on your progress</label>
+            </div>
+
+            <button class="form__submit" type="submit">Send</button>
+          </form>
+        </div>
+      </section>        
     </main>
-    <footer>
-      <!--email address to be added-->
-      Email: <a href="mailto:-">-</a> GitHub:
-      <a href="https://github.com/ccassinjr">ccassinjr</a> LinkedIn:
-      <a href="https://www.linkedin.com/in/ccassinjr/">ccassinjr</a> X:
-      <a href="https://x.com/ccassinjr">ccassinjr</a>
-    </footer>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+      <nav class="footer_nav" aria-label="Social links">
+        <a
+          class="footer__link"
+          href="https://github.com/ccassinjr"
+          target="_blank"
+          rel="noopener no referrer"
+        >GitHub</a>
+        <a
+          class="footer__link"
+          href="https://linkedin.com/in/ccassinjr"
+          target="_blank"
+          rel="noopener no referrer"
+        >LinkedIn</a>
+        <a
+          class="footer__link"
+          href="https://x.com/ccassinjr"
+          target="_blank"
+          rel="noopener no referrer"
+        >X</a>
+      </nav>
+      <p class="footer__credit">ccassinjr<span class="footer__cursor" aria-hidden="true">|</span></p>
+      <p class="footer__copy">&copy; 2026 ccassinjr</p>
+    </footer> 
+    
   </body>
 </html>
