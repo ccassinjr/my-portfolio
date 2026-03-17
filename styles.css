@@ -22,7 +22,7 @@
   --space-xl: 6rem;
 
   /* LAYOUT */
-  --maxwidth: 64rem;
+  --max-width: 64rem;
   --section-pad: var(--space-xl);
 }
 
@@ -38,7 +38,7 @@
   50% { opacity: 0; }
 }
 
-/* Reset & Base */
+/* =====Reset & Base===== */
 
 *,
 *::before,
@@ -82,3 +82,67 @@ input,
 textarea {
   font: inherit;
 }
+
+/* =====Navigation===== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border)
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto; /* margin: 0 is redundant. It's here for clarity only */
+  padding: 0.875rem var(--space-md);
+}
+
+.nav__logo {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease; 
+}
+
+.nav__logo:hover {
+  opacity: 0.75;
+}
+
+.nav__link {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* UNDERLINE SLIDE-IN ON HOVER */
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav__link:hover {
+  color: var(--text);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
