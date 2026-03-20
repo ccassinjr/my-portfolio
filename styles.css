@@ -146,3 +146,36 @@ textarea {
   width: 100%;
 }
 
+/* =====Hero Section===== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.hero__content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero__heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+
+/* GOLD GRADIENT TEXT - HERO HEADING ONLY */
+  background: linear-gradient(135deg, #c8a96e, #e8d5b0, #a8894e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* ENTRANCE ANIMATION */
+  animation: fade-in 0.8s ease both;
+  animation-delay: 0.1s;
+}
