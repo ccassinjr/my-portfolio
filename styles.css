@@ -157,7 +157,7 @@ textarea {
 
 .hero__content {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 0 auto; /* margin: 0 is redundant. It's here for clarity only */
   width: 100%;
 }
 
@@ -165,9 +165,10 @@ textarea {
   font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(3rem, 10vw, 7rem);
-  line-height: 1.05;
+  line-height: 1.145;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
+  padding-left: 0.33rem;
 
 /* GOLD GRADIENT TEXT - HERO HEADING ONLY */
   background: linear-gradient(135deg, #c8a96e, #e8d5b0, #a8894e);
@@ -178,4 +179,40 @@ textarea {
   /* ENTRANCE ANIMATION */
   animation: fade-in 0.8s ease both;
   animation-delay: 0.1s;
+}
+
+.hero__subheading {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 38rem;
+  line-height: 1.65;
+  margin-bottom: var(--space-lg);
+
+  /* SUBHEADING ANIMATION */
+  animation: fade-in 0.8s ease both;
+  animation-delay: 0.6s;
+}
+
+.hero__cta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.75rem 1.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  /* HERO CTA ANIMATION */
+  animation: fade-in 0.8s ease both;
+  animation-delay: 1.1s;
+}
+
+.hero__cta:hover {
+  background-color: var(--accent);
+  color: var(--bg);
 }
