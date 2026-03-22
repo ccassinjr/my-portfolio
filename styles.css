@@ -221,13 +221,13 @@ textarea {
 .hero__cta {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: lowercase;
   color: var(--accent);
   border: 1px solid var(--accent);
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease;
 
   /* HERO CTA ANIMATION */
@@ -257,5 +257,10 @@ textarea {
     width: auto;
     justify-content: flex-end;
     gap: var(--space-md);
+  }
+
+  .hero__cta {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9375rem;
   }
 }
