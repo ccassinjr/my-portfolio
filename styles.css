@@ -20,6 +20,7 @@
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 6rem;
+  --space-2xl: 10rem;
 
   /* LAYOUT */
   --max-width: 64rem;
@@ -30,7 +31,7 @@
 
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(1rem); }
-  to { opacity: 1; transform: translateY(0) }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes cursor-blink {
@@ -90,16 +91,17 @@ textarea {
   top: 0;
   z-index: 100;
   background-color: var(--bg);
-  border-bottom: 1px solid var(--border)
+  border-bottom: 1px solid var(--border);
 }
 
 .nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-sm);
   max-width: var(--max-width);
   margin: 0 auto; /* margin: 0 is redundant. It's here for clarity only */
-  padding: 0.875rem var(--space-md);
+  padding: var(--space-sm) var(--space-md);
 }
 
 .nav__logo {
@@ -115,9 +117,15 @@ textarea {
   opacity: 0.75;
 }
 
+.nav__list {
+  display: flex;
+  align-items: center; 
+  gap: var(--space-md);
+}
+
 .nav__link {
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   color: var(--muted);
   letter-spacing: 0.04em;
   text-transform: lowercase;
@@ -165,10 +173,10 @@ textarea {
   font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(3rem, 10vw, 7rem);
-  line-height: 1.145;
+  line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-md);
-  padding-left: 0.33rem;
+  padding: 0 0 0.35rem 0.35rem; /* prevents glyph clipping on background-clip: text at large italic sizes */
 
 /* GOLD GRADIENT TEXT - HERO HEADING ONLY */
   background: linear-gradient(135deg, #c8a96e, #e8d5b0, #a8894e);
@@ -198,7 +206,7 @@ textarea {
 .hero__cta {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: lowercase;
@@ -215,4 +223,18 @@ textarea {
 .hero__cta:hover {
   background-color: var(--accent);
   color: var(--bg);
+}
+
+@media (min-width: 48rem) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.875rem var(--space-md);
+  }
+
+  .nav__list {
+    width: auto;
+    justify-content: flex-end;
+    gap: var(--space-md);
+  }
 }
