@@ -257,8 +257,8 @@ textarea {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-  "image"
-  "text";
+    "image"
+    "text";
   gap: var(--space-lg);
 }
 
@@ -309,10 +309,109 @@ textarea {
   border: 1px solid var(--border);
 }
 
+/* =====Projects Section===== */
+
+.projects {
+  padding: var(--section-pad) 0;
+  border-top: 1px solid var(--border);
+}
+
+.projects__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.projects__heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+.projects__body {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 38rem;
+  margin-bottom: var(--space-lg);
+}
+
+.projects__github-link {
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.projects__github-link:hover {
+  border-color: var(--accent);
+}
+
+/*  PROJECT CARD GRID */
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+/* PROJECT CARD */
+.project-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  padding: var(--space-md);
+  transition:
+    transform 0.2s ease,
+    border-top-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-0.25rem);
+  border-top-color: #e8d5b0;
+}
+
+.project-card__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+}
+
+.project-card__description {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+}
+
+.project-card__links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.project-card__link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 0.375rem 0.875rem;
+  white-space: nowrap;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-card__link:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
 /* =====Responsive - Desktop (min-width: 48rem (768px))===== */
 
 @media (min-width: 48rem) {
-  
   /* =====Responsive - Navigation===== */
 
   .nav {
@@ -359,5 +458,11 @@ textarea {
     padding-left: var(--space-lg);
     justify-content: flex-start;
     align-items: start;
+  }
+
+  /* =====Responsive - Projects===== */
+
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
