@@ -97,6 +97,11 @@ textarea {
   font: inherit;
 }
 
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
 /* =====Navigation===== */
 
 .site-header {
@@ -476,6 +481,10 @@ textarea {
 .form__input:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.form__input::placeholder {
+  color: var(--muted);
 }
 
 .form__input--textarea {
