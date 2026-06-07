@@ -61,6 +61,11 @@
   padding: 0;
 }
 
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -95,11 +100,6 @@ button,
 input,
 textarea {
   font: inherit;
-}
-
-::selection {
-  background-color: var(--accent);
-  color: var(--bg);
 }
 
 /* =====Navigation===== */
