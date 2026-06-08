@@ -181,8 +181,7 @@ textarea {
   border: none;
   cursor: pointer;
   padding: 0.25rem;
-  display: none;
-  /* display: flex; - Replace the above once JS is done */
+  display: flex;
   flex-direction: column;
   gap: 0.3125rem;
   align-self: center;
@@ -191,7 +190,7 @@ textarea {
 .nav__toggle-bar {
   display: block;
   width: 1.5rem;
-  height: 1px;
+  height: 1.5px;
   background-color: var(--text);
   transition:
     transform 0.3s ease,
@@ -201,31 +200,31 @@ textarea {
 /* X STATE */
 
 .nav__toggle.is-open .nav__toggle-bar:nth-child(1) {
-  transform: translateY(0.4375rem) rotate(45deg);
+  transform: translateY(0.4rem) rotate(45deg);
 }
+
 .nav__toggle.is-open .nav__toggle-bar:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
+
 .nav__toggle.is-open .nav__toggle-bar:nth-child(3) {
-  transform: translateY(-0.4375rem) rotate(-45deg);
+  transform: translateY(-0.4rem) rotate(-45deg);
 }
 
 /* MOBILE NAV DROPDOWN */
 
 .nav__list {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  gap: 0;
-}
-
-/* .nav__list {
   display: none;
   width: 100%;
-} - Replace the above once JS is done */
+}
 
 .nav__list.is-open {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  background-color: var(--bg);
 }
 
 /* =====Hero Section===== */
