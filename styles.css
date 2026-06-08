@@ -599,7 +599,7 @@ textarea {
 
 .form__label--checkbox {
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   letter-spacing: 0.04em;
   text-transform: none;
   color: var(--muted);
@@ -761,12 +761,6 @@ textarea {
   .projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-/* =====Responsive - Contact==== */
-
-.form__label--checkbox {
-  font-size: 0.75rem;
 }
 
 /* =====JavaScript States===== */
