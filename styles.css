@@ -181,7 +181,8 @@ textarea {
   border: none;
   cursor: pointer;
   padding: 0.25rem;
-  display: flex;
+  display: none;
+  /* display: flex; - Replace the above once JS is done */
   flex-direction: column;
   gap: 0.3125rem;
   align-self: center;
@@ -212,9 +213,16 @@ textarea {
 /* MOBILE NAV DROPDOWN */
 
 .nav__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0;
+}
+
+/* .nav__list {
   display: none;
   width: 100%;
-}
+} - Replace the above once JS is done */
 
 .nav__list.is-open {
   display: flex;
@@ -591,7 +599,7 @@ textarea {
 
 .form__label--checkbox {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.04em;
   text-transform: none;
   color: var(--muted);
@@ -753,6 +761,12 @@ textarea {
   .projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* =====Responsive - Contact==== */
+
+.form__label--checkbox {
+  font-size: 0.75rem;
 }
 
 /* =====JavaScript States===== */
