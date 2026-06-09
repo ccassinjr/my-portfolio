@@ -636,7 +636,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
 }
 
 .footer__nav {
@@ -764,13 +764,13 @@ textarea {
 
 /* =====JavaScript States===== */
 
-/* [data-section] {
+[data-section] {
   opacity: 0;
   transform: translateY(1rem);
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
-} */
+}
 
 [data-section].is-visible {
   opacity: 1;
