@@ -467,6 +467,44 @@ textarea {
   color: var(--text);
 }
 
+/* FEATURED CARD - spans the full grid width */
+.project-card--featured {
+  grid-column: 1 / -1;
+}
+
+.project-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-xs);
+}
+
+/* TESTIMONIAL */
+.project-card__testimonial {
+  border-left: 1px solid var(--border);
+  padding-left: var(--space-sm);
+  margin-bottom: var(--space-md);
+  max-width: 38rem;
+}
+
+.project-card__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.project-card__quote-source {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: var(--space-xs);
+}
+
 /* =====Contact Section===== */
 
 .contact {
