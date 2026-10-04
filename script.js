@@ -5,10 +5,18 @@
 const navToggle = document.querySelector(".nav__toggle");
 const navList = document.querySelector(".nav__list");
 const navLinks = document.querySelectorAll(".nav__link");
+let scrollAtOpen = 0;
+
 const openMenu = function () {
   navToggle.classList.add("is-open");
   navList.classList.add("is-open");
   navToggle.setAttribute("aria-expanded", "true");
+
+  // Opening the menu changes the layout, and the browser may nudge the
+  // scroll position. Force the layout first so that nudge is counted here,
+  // not mistaken for the user scrolling.
+  void navList.offsetHeight;
+  scrollAtOpen = window.scrollY;
 };
 const closeMenu = function () {
   navToggle.classList.remove("is-open");
@@ -42,12 +50,15 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// Close menu on scroll
-window.addEventListener("scroll", function () {
-  if (navList.classList.contains("is-open")) {
-    closeMenu();
-  }
-});
+// Close menu once the user has scrolled at least 10px since opening it
+window.addEventListener(
+  "scroll",
+  function () {
+    if (!navList.classList.contains("is-open")) return;
+    if (Math.abs(window.scrollY - scrollAtOpen) >= 10) closeMenu();
+  },
+  { passive: true },
+);
 
 // =====SCROLL ANIMATIONS=====
 
@@ -92,7 +103,7 @@ const navObserver = new IntersectionObserver(
   },
   {
     // Watch a thin band near the middle of the screen, so tall sections still register
-    rootMargin: "-50% 0px -50% 0px",
+    rootMargin: "-45% 0px -50% 0px",
     threshold: 0,
   },
 );

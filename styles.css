@@ -231,6 +231,7 @@ textarea {
 
 .hero {
   min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100svh - var(--nav-height));
   display: flex;
   align-items: center;
   padding: var(--space-lg) 0;
