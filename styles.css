@@ -472,6 +472,10 @@ textarea {
   grid-column: 1 / -1;
 }
 
+.project-card--featured .project-card__description {
+  max-width: 38rem;
+}
+
 .project-card__tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -571,6 +575,10 @@ textarea {
 
 .form__input:focus {
   outline: none;
+  border-color: var(--accent);
+}
+
+.form__input--error {
   border-color: var(--accent);
 }
 
@@ -739,8 +747,6 @@ textarea {
   /* =====Responsive - Navigation===== */
 
   .nav {
-    flex-direction: row;
-    justify-content: space-between;
     padding: 0.875rem var(--space-md);
   }
 

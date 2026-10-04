@@ -74,13 +74,11 @@ sections.forEach(function (section) {
 // =====ACTIVE NAV LINK=====
 
 const allSections = document.querySelectorAll("section[id]");
-const allNavLinks = document.querySelectorAll(".nav__link");
-
 const navObserver = new IntersectionObserver(
   function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        allNavLinks.forEach(function (link) {
+        navLinks.forEach(function (link) {
           link.classList.remove("is-active");
         });
         const activeLink = document.querySelector(
@@ -93,7 +91,9 @@ const navObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
+    // Watch a thin band near the middle of the screen, so tall sections still register
+    rootMargin: "-50% 0px -50% 0px",
+    threshold: 0,
   },
 );
 
@@ -113,7 +113,7 @@ const showError = function (input, message) {
   const existing = field.querySelector(".form__error");
   if (existing) existing.remove();
 
-  input.style.borderColor = "var(--accent)";
+  input.classList.add("form__input--error");
 
   const error = document.createElement("p");
   error.classList.add("form__error");
@@ -125,7 +125,8 @@ const clearError = function (input) {
   const field = input.closest(".form__field");
   const existing = field.querySelector(".form__error");
   if (existing) existing.remove();
-  input.style.borderColor = "";
+
+  input.classList.remove("form__input--error");
 };
 
 const isValidEmail = function (email) {
@@ -168,6 +169,5 @@ form.addEventListener("submit", function (e) {
 [nameInput, emailInput, messageInput].forEach(function (input) {
   input.addEventListener("input", function () {
     clearError(input);
-    input.style.borderColor = "";
   });
 });
