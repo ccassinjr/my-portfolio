@@ -231,7 +231,6 @@ textarea {
 
 .hero {
   min-height: calc(100vh - var(--nav-height));
-  min-height: calc(100svh - var(--nav-height));
   display: flex;
   align-items: center;
   padding: var(--space-lg) 0;
@@ -809,17 +808,20 @@ textarea {
 
 /* =====JavaScript States===== */
 
-[data-section] {
+.js [data-section] {
   opacity: 0;
-  transform: translateY(1rem);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
-[data-section].is-visible {
+.js [data-section].is-visible {
   opacity: 1;
-  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-section] {
+    opacity: 1;
+    transition: none;
+  }
 }
 
 .form__error {
